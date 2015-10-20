@@ -8,7 +8,10 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var config = require('./config/env');
 
-mongoose.connect(config.mongo.uri);
+mongoose.connect(config.mongo.uri, function (error) {
+    if (error) console.error(error);
+    else console.log('mongo connected');
+});
 
 app.use(morgan('dev')); 
 app.use(bodyParser.urlencoded({'extended':'true'})); 
