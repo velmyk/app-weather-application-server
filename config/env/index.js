@@ -2,6 +2,6 @@
 
 module.exports = {
   mongo: {
-    uri: 'mongodb://localhost:27017/weather-app-db'
+    uri: 'mongodb://citydb@ds051853.mongolab.com:51853/cities'
   }
 };
