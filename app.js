@@ -26,6 +26,6 @@ app.use(function(req, res, next) {
 
 require('./routes.js')(app);
 
-app.listen(port);
+app.listen(listen(process.env.PORT || 5000););
 
 console.log("Server listening on port " + port);

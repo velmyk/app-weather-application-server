@@ -12,6 +12,6 @@ var CitySchema = new Schema({
   		lat: Number
   	},
   	pole: Number
-});
+}, {collection: 'all-cities'});
 
 module.exports = mongoose.model('City', CitySchema);
